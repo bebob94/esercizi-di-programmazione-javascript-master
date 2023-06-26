@@ -45,3 +45,15 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const calendarioMediocre = (giorniMese, giornoSettimana) => {
+  const daysOfWeek = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
+  let result = "";
+  for (let i = 1; i <= giorniMese; i++) {
+    result += `${i} ${daysOfWeek[giornoSettimana]} \n`;
+    giornoSettimana = (giornoSettimana + 1) % 7;
+  }
+  return result;
+};
+
+console.log(calendarioMediocre(31, 3));

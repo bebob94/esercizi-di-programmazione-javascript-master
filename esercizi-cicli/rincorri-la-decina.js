@@ -19,3 +19,17 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const RincorriLaDecina = () => {
+  let result = "";
+  for (let i = 0; i <= 100; i++) {
+    result += ` ${i} `;
+    if (i % 10 === 0) {
+      result += "\n";
+    }
+  }
+  console.log(result);
+  return result;
+};
+
+console.log(RincorriLaDecina());

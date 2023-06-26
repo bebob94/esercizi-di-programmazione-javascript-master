@@ -8,3 +8,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const tabelline = (num) => {
+  let result = [];
+  for (let i = 0; i < 11; i++) {
+    result.push(num * i);
+  }
+  return result;
+};
+
+console.log(tabelline(3));

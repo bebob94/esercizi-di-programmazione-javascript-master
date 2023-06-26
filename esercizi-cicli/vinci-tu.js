@@ -14,3 +14,19 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const vinciTu = (num) => {
+  let player1 = 0;
+  let player2 = 0;
+  for (let i = 0; i < num; i++) {
+    console.log((player1 += Math.floor(Math.random() * 6) + 1));
+    console.log((player2 += Math.floor(Math.random() * 6) + 1));
+  }
+  return player1 > player2
+    ? `complimenti ha vinto il player1 con ${player1} punti`
+    : player1 === player2
+    ? `riprovate è terminata in pareggio con ${player1} punti`
+    : `complimenti ha vinto il player2 con ${player2} punti`;
+};
+
+console.log(vinciTu(3));

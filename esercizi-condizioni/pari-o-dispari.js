@@ -15,3 +15,7 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const pariDispari = (num) => (num % 2 === 0 ? 0 : 1);
+
+console.log(pariDispari(4));

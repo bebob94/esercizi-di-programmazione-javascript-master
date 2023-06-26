@@ -12,3 +12,10 @@
     
   http://www.imparareaprogrammare.it
 */
+
+const conta = (num) =>
+  num > 9999 || num <= 0
+    ? "per favore inserisci un'altro numero"
+    : num.toString().length;
+
+console.log(conta(5666));

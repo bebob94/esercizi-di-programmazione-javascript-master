@@ -10,3 +10,12 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const MaggioreMinore = (n1, n2, n3, n4) => {
+  return {
+    maggiore: Math.max(n1, n2, n3, n4),
+    minore: Math.min(n1, n2, n3, n4),
+  };
+};
+
+console.log(MaggioreMinore(1, 7, 5, 9));

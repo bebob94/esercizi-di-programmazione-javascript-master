@@ -18,3 +18,34 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const professore = (voto) => {
+  if (18 <= voto && voto < 21) {
+    return "sufficiente";
+  } else if (21 <= voto && voto < 24) {
+    return "buono";
+  } else if (24 <= voto && voto < 27) {
+    return "distinto";
+  } else if (27 <= voto && voto <= 29) {
+    return "ottimo";
+  } else if (voto === 30) {
+    return "eccellente";
+  }
+};
+const professore2 = (voto) => {
+  switch (true) {
+    case 18 <= voto && voto < 21:
+      return "sufficiente";
+    case 21 <= voto && voto < 24:
+      return "buono";
+    case 24 <= voto && voto < 27:
+      return "distinto";
+    case 27 <= voto && voto <= 29:
+      return "ottimo";
+    case voto === 30:
+      return "eccellente";
+  }
+};
+
+console.log(professore(25));
+console.log(professore2(30));

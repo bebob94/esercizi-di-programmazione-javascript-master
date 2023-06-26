@@ -19,3 +19,21 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const gioco = (player1, player2) => {
+  const random = Math.floor(Math.random() * 100) + 1;
+  console.log(random);
+  switch (true) {
+    case player1 === random && player2 !== random:
+      return "Vincitore giocatore 1";
+    case player1 !== random && player2 === random:
+      return "Vincitore giocatore 2";
+    case player1 === random && player2 === random:
+      return "Complimenti siete entrambi vincitori";
+    case Math.abs(player1 - random) < Math.abs(player2 - random):
+      return "Il giocatore 1 si è avvicinato di più";
+    case Math.abs(player1 - random) > Math.abs(player2 - random):
+      return "Il giocatore 2 si è avvicinato di più";
+  }
+};
+console.log(gioco(20, 80));

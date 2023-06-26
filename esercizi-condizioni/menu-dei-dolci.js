@@ -21,3 +21,20 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const dolci = (num) => {
+  switch (true) {
+    case num === 1:
+      return "Tiramisù";
+    case num === 2:
+      return "Torta della nonna";
+    case num === 3:
+      return "Cheesecake alla nutella";
+    case num === 4:
+      return "Macedonia";
+    default:
+      return "Dolce non disponibile";
+  }
+};
+
+console.log(dolci(1));

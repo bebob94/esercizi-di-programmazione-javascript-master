@@ -28,3 +28,25 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const calcolatrice = (n1, n2, operazione) => {
+  switch (true) {
+    case operazione === "somma":
+      return n1 + n2;
+    case operazione === "sottrazione":
+      return n1 > n1 ? n1 - n2 : n2 - n1;
+    case operazione === " moltiplicazione":
+      return n1 * n2;
+    case operazione === "divisione":
+      return n1 / n2;
+    case operazione === "modulo":
+      return n1 % n2;
+    case operazione === "potenza":
+      return n1 ** n2;
+    case operazione === "media":
+      return (n1 + n2) / 2;
+    default:
+      "inserire un operatore valido";
+  }
+};
+console.log(calcolatrice(3, 4, "modulo"));

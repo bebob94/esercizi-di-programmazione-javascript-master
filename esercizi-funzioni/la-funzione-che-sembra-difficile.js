@@ -10,3 +10,11 @@
     
   http://www.imparareaprogrammare.it
 */
+
+const k_esima = (N, K) => {
+  return N.toString().length >= K
+    ? parseInt(N.toString()[N.toString().length - K])
+    : 0;
+};
+
+console.log(k_esima(123456, 6));

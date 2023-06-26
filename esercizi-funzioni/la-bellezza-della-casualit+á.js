@@ -8,3 +8,9 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const casualità = (num) => {
+  return (Math.random() * num).toFixed(2);
+};
+
+console.log(casualità(100));

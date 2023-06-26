@@ -12,3 +12,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+let result = 1;
+const fattoriale = (num) => {
+  for (let i = num; i > 0; i--) {
+    result = result * i;
+  }
+  return result;
+};
+
+console.log(fattoriale(5));

@@ -14,3 +14,25 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const indovinaGiorno = (num) => {
+  return num > 0 && num < 8;
+};
+
+const verifica = (num) => {
+  dayOfWeek = [
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+    "Domenica",
+  ];
+  return indovinaGiorno(num) === false
+    ? "mi dispiace non posso calcolarlo"
+    : dayOfWeek[num - 1];
+};
+
+console.log(indovinaGiorno(5));
+console.log(verifica(7));

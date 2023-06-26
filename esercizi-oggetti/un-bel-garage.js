@@ -14,4 +14,17 @@ class Automobile {
     (this.nome = nome), (this.modello = modello);
   }
 }
-console.log(printMarca("FORD"));
+
+let car1 = new Automobile("Ford", "Fiesta");
+let car2 = new Automobile("Fiat", "punto");
+let car3 = new Automobile("Peugeot", "307");
+
+const garage = [car1, car2, car3];
+
+const printMarca = (modello) => {
+  return `${garage
+    .filter((elem) => elem.modello === modello)
+    .map((elem) => elem.nome)}`;
+};
+
+console.log(printMarca("Fiesta"));

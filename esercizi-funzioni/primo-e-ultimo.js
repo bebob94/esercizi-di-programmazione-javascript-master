@@ -13,3 +13,22 @@
 
   http://www.imparareaprogrammare.it
 */
+const max = (n1, n2, n3) => {
+  return Math.max(n1, n2, n3);
+};
+console.log(max(2, 6, 3));
+
+const min = (n1, n2, n3) => {
+  return Math.min(n1, n2, n3);
+};
+console.log(min(2, 6, 3));
+
+const maxArray = (array) => {
+  return Math.max(...array);
+};
+console.log(maxArray([2, 6, 3]));
+
+const minArray = (array) => {
+  return Math.min(...array);
+};
+console.log(minArray([2, 6, 3]));

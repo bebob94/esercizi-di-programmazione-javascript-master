@@ -58,13 +58,13 @@ let detenuto1 = new Detenuto("Daniele", "Testi");
 let detenuto2 = new Detenuto("Kevin", "Fuccio");
 
 let fascicolo1 = new Fascicolo(
-  "#12345",
+  detenuto1,
   "12 - 6 - 2013",
   "24 - 3 - 2020",
   "Stupro di nane"
 );
 let fascicolo2 = new Fascicolo(
-  "#6789",
+  detenuto2,
   "12 - 6 - 2015",
   "24 - 3 - 2022",
   "commercio clandestino di agrumi"
@@ -84,7 +84,7 @@ console.log(AggiungiGuardia("Alessandro", "D'ascenzo"));
 const AggiungiDetenuto = (name, surname, crimine, dataCarcerazione) => {
   let newDetenuto = new Detenuto(name, surname);
   let newFascicolo = new Fascicolo(
-    "#65443",
+    newDetenuto,
     dataCarcerazione,
     "24 - 3 - 2023",
     crimine
@@ -101,3 +101,66 @@ console.log(
     23 - 6 - 2023
   )
 );
+
+const visualizzaCategoria = (categoria) => {
+  switch (categoria) {
+    case "detenuti":
+      return detenuti;
+    case "guardie":
+      return guardie;
+    case "fascicoli":
+      return fascicoli;
+    default:
+      return "errore ripeti la ricerca";
+  }
+};
+console.log(visualizzaCategoria("detenutii"));
+
+const ricercaPerNome = (string) => {
+  return fascicoli.filter((elem) => elem.identificativo.nome === string)[0];
+};
+
+console.log(ricercaPerNome("Daniele"));
+
+let DetenutiMorti = [];
+const morti = (index) => {
+  DetenutiMorti = detenuti.splice(index, 1);
+  fascicoli.splice(1, 0);
+  return DetenutiMorti, detenuti;
+};
+
+console.log(morti(1));
+
+let DetenutiEvasi = [];
+const evasi = (index) => {
+  DetenutiEvasi = detenuti.splice(index, 1);
+  fascicoli.splice(1, 0);
+  return DetenutiEvasi, detenuti;
+};
+
+console.log(evasi(1));
+
+const count = () => {
+  console.log(
+    guardie.length > 1
+      ? `le guardie sono ${guardie.length}`
+      : `la guardia è ${guardie.length}`
+  );
+  console.log(
+    detenuti.length > 1
+      ? `i detenuti sono ${detenuti.length}`
+      : `il detenuto è ${detenuti.length}`
+  );
+  console.log(
+    evasi.length > 1
+      ? `i detenuti evasi sono ${evasi.length}`
+      : `il detenuto evaso è ${evasi.length}`
+  );
+  console.log(
+    morti.length > 1
+      ? `i detenuti morti sono ${morti.length}`
+      : `il detenuto morto è ${morti.length}`
+  );
+};
+
+count();

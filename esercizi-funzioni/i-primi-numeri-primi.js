@@ -20,3 +20,30 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const IPrimiNumeriPrimi = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i < Math.sqrt(num); i++) {
+    if (num % 2 === 0) return false;
+  }
+  return true;
+};
+console.log(IPrimiNumeriPrimi(9));
+
+const INumeriPrimi = (num) => {
+  const numeriPrimi = [];
+  let numeroCorrente = 2;
+
+  while (numeriPrimi.length < num) {
+    if (IPrimiNumeriPrimi(numeroCorrente)) {
+      numeriPrimi.push(numeroCorrente);
+    }
+    numeroCorrente++;
+  }
+
+  return numeriPrimi;
+};
+
+console.log(INumeriPrimi(5));

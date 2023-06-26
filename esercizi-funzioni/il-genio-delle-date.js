@@ -14,3 +14,15 @@
           
   http://www.imparareaprogrammare.it
 */
+
+const genioDelleDate = (giorno, mese) => {
+  const year = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let result = 0;
+  for (let i = 0; i < mese - 1; i++) {
+    result += year[i];
+  }
+  result += giorno;
+  return result;
+};
+
+console.log(genioDelleDate(5, 2));

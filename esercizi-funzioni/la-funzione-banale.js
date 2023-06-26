@@ -16,3 +16,9 @@
     
   http://www.imparareaprogrammare.it
 */
+
+const banale = (arg1, arg2) => {
+  return arg1 === arg2;
+};
+
+console.log(banale(2, "2"));

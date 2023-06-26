@@ -14,3 +14,11 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const palindroma = (string) => {
+  return (
+    string.replace(/\W/g, "") ===
+    string.replace(/\W/g, "").split("").reverse().join("")
+  );
+};
+console.log(palindroma("i topi non avevano nipoti"));

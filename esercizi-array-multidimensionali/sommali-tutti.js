@@ -17,3 +17,21 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const generaMatriceCasuale = (N, M) => {
+  let matrice = [];
+  let somma = 0;
+  for (let i = 0; i < N; i++) {
+    let riga = [];
+    for (let j = 0; j < M; j++) {
+      const valoreCasuale = Math.floor(Math.random() * 100) + 1;
+      riga.push(valoreCasuale);
+      somma += valoreCasuale;
+    }
+    matrice.push(riga);
+  }
+  console.log("somma =", somma);
+  return matrice;
+};
+
+console.log(generaMatriceCasuale(2, 3));

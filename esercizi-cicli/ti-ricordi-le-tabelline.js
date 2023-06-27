@@ -14,7 +14,7 @@ const tabelline = (num) => {
   for (let i = 0; i < 11; i++) {
     result.push(num * i);
   }
-  return result;
+  return result.toString();
 };
 
 console.log(tabelline(3));

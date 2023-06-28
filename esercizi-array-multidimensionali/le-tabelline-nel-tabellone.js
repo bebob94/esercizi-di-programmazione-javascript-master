@@ -14,22 +14,13 @@
 
 const tabellone = () => {
   let result = "x";
-  let incr = 10;
-
   for (let j = 0; j <= 10; j++) {
     result += ` | ${j}`;
-    if (j === incr) {
-      result += " \n ";
-    }
   }
-
   for (let ind = 0; ind <= 10; ind++) {
     result += `\n ${ind}`;
     for (let i = 0; i <= 10; i++) {
       result += ` | ${i * ind}`;
-      if (i === incr) {
-        result += " \n ";
-      }
     }
   }
   console.log(result);

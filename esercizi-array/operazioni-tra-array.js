@@ -19,3 +19,41 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const OperazioniTraArray = (array1, array2, operatore) => {
+  switch (true) {
+    case operatore === "somma":
+      return array1.map((elem, index) => elem + array2[index]);
+    case operatore === "sottrazione":
+      return array1.map((elem, index) =>
+        elem > array2[index] ? elem - array2[index] : array2[index] - elem
+      );
+    case operatore === "moltiplicazione":
+      return array1.map((elem, index) => elem * array2[index]);
+    case operatore === "divisione":
+      return array1.map((elem, index) => elem / array2[index]);
+    case operatore === "modulo":
+      return array1.map((elem, index) => elem % array2[index]);
+    case operatore === "potenza":
+      return array1.map((elem, index) => Math.pow(elem, array2[index]));
+    case operatore === "media":
+      return array1.map((elem, index) => (elem + array2[index]) / 2);
+    default:
+      return "Inserire un operatore valido";
+  }
+};
+
+let array1 = [];
+for (let i = 0; i <= 10; i++) {
+  const a = Math.floor(Math.random() * 10) + 1;
+  array1.push(a);
+}
+console.log(array1);
+let array2 = [];
+for (let i = 0; i <= 10; i++) {
+  const a = Math.floor(Math.random() * 10) + 1;
+  array2.push(a);
+}
+console.log(array2);
+
+console.log(OperazioniTraArray(array1, array2, "sottrazione"));

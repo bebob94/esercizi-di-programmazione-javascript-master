@@ -12,3 +12,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const TantiNumeri = (array) => {
+  let media =
+    array.reduce((previus, current) => previus + current) / array.length;
+  console.log(media);
+  console.log(array.filter((elem) => elem < media));
+  console.log(array.filter((elem) => elem > media));
+};
+
+TantiNumeri([3, 5, 10, 2, 8]);

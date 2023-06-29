@@ -15,3 +15,14 @@
 
   http://www.imparareaprogrammare.it
 */
+const invertimi = (n) => {
+  let array1 = [];
+  for (let i = 0; i < n; i++) {
+    const a = Math.floor(Math.random() * 10) + 1;
+    array1.push(a);
+  }
+  console.log(array1);
+  console.log(array1.reverse());
+};
+
+invertimi(5);

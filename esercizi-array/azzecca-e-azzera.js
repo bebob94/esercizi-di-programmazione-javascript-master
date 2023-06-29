@@ -12,3 +12,42 @@
 
   http://www.imparareaprogrammare.it
 */
+
+// Creazione dell'array e riempimento con numeri casuali da 1 a 50
+
+// esercizi a caso
+let per = { name: "alberto", surname: "macis" };
+
+console.log(Object.entries(per));
+
+for (const pers in per) {
+  if (Object.hasOwnProperty.call(per, pers)) {
+    const element = per[pers];
+    console.log(element);
+  }
+}
+
+console.log(per);
+
+let array = [1, 3, 4, 6, 3, 7, 4, 7, 8, 9];
+
+console.log(array.indexOf(4));
+
+let str = "5";
+
+console.log(typeof +str);
+
+let aaa = "abcdefg";
+
+console.log(aaa.split("").reverse().join(""));
+
+console.log(array.filter((elem, index) => array.indexOf(elem) === index));
+console.log([...new Set(array)]);
+
+const uniqueArray = array.reduce((acc, curr) => {
+  if (!acc.includes(curr)) {
+    acc.push(curr);
+  }
+  return acc;
+}, []);
+console.log(uniqueArray);

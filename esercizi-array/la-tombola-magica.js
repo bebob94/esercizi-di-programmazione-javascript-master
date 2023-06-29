@@ -51,7 +51,6 @@ while (arrayPrincipale.length < 10) {
   }
 }
 let arrayScelti = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-
 console.log("Array principale:", arrayPrincipale);
 console.log("Numeri scelti:", arrayScelti);
 console.log(verificaTombola(arrayPrincipale, arrayScelti));
